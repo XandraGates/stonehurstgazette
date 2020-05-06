@@ -1,0 +1,19 @@
+<%- include('templates/header') %>
+
+<div style="margin-left: 2%">
+<div class="container-fluid">
+    <h1><%= article.title %></h1>
+    <img src="<%= article.image %>" alt="post img" class="artimg">
+    <span class="lead"><%= article.created.toDateString()%></span>
+    <article><p>
+        <%- article.body %>
+        </p>
+    </article>
+</div>
+
+<a class="btn btn-lg btn-success" href="/latestnews/<%=article._id%>/edit">Edit Post</a>
+<form action="/latestnews/<%=article._id%>?_method=DELETE" method="POST" id="deletebtn">
+<button type="submit" class="btn btn-lg btn-danger">Delete</button>
+</form>
+</div>
+<%- include('templates/footer') %>

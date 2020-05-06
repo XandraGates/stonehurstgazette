@@ -1,0 +1,64 @@
+
+.title {
+    font-size: 2em;
+    font-weight: 800;
+    font-family: 'Lobster', cursive;
+}
+
+.preview-img {
+    width: 80%;
+}
+
+.card {
+    text-align: center;
+    border: none;
+}
+
+#formhead {
+    border: 5px solid black;
+    padding: 5px;
+}
+
+.newform {
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.btn-link {
+    color: white;
+    text-decoration: none;
+}
+
+#deletebtn {
+    display: inline;
+}
+
+/* Simple Article Post CSS */
+.artimg {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    border: 5px dashed black;
+    max-height: 400px;
+}
+
+article {
+    margin-bottom: 20%;
+}
+
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    height: 3rem;
+}
+
+@media only screen and (max-width: 850px) {
+    .artimg {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 5%;
+    }
+  }

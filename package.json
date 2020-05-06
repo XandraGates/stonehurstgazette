@@ -1,0 +1,26 @@
+{
+  "name": "stonehurst-gazette",
+  "version": "1.0.0",
+  "description": "A fictional local news website for a fictional town",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "Lex Haringman",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "express-sanitizer": "^1.0.5",
+    "locus": "^2.0.4",
+    "method-override": "^3.0.0",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.12"
+  },
+  "devDependencies": {}
+}

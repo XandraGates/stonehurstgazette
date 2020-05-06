@@ -1,0 +1,43 @@
+<%- include('templates/header') %>
+<div>
+    <% if (noMatch !== null){ %>
+        <h3 class="text-center"><%= noMatch %></h3>
+        <div class="form-group container text-center">
+        <form class="form-inline my-2 my-lg-0" action="/latestnews" method="GET">
+            <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
+            <input type="submit" value="search" class="btn btn-lg btn-success">
+          </form>
+        </div>
+    <% } %>
+</div>
+<div class="row">
+<% for (var i = 0; i < articles.length; i++){ %>
+    <div class="col-md">
+    <div class="card">
+        <div class="card-title">
+            <h2><%=articles[i].title%></h2>
+            <p><%=articles[i].created.toDateString()%></p>
+        </div>
+        <div class="card-body">
+            <img class="preview-img" src='<%=articles[i].image%>'>
+            <p class="lead"><%-articles[i].body.substring(0,100)%>...</p>
+        </div>
+        <div class="card-footer">
+            <a class="btn btn-lg btn-primary" href="/latestnews/<%= articles[i]._id %>">Read More</a>
+        </div>
+    </div>
+</div> <!--end of col div-->
+<% if (i % 3 == 0){ %>
+</div>
+<div class="row">
+<% } %>
+<% } %>
+</div> <!--end of row div-->
+
+<div style="height:5%;">
+    <span>&nbsp;</span>
+</div>
+
+
+
+<%- include('templates/footer') %>

@@ -1,0 +1,19 @@
+<%- include('templates/header') %>
+
+<div class="container text-center">
+    <div class="container newform">
+    <h1 id="formhead"> Edit <%= article.title %></h1>
+    <div class="form-group">
+    <form action="/latestnews/<%=article._id%>?_method=PUT" method="POST">
+        <input type="text" class="form-control" name="article[title]" value="<%= article.title %>" required>
+        <br>
+        <input type="text" class="form-control" name="article[image]" value="<%= article.image %>" required>
+        <br>
+        <textarea class="form-control" name="article[body]" required><%= article.body %></textarea>
+        <br>
+        <button type="submit" class="btn-lg btn btn-success">Submit</button>
+    </form>
+</div>
+</div>
+</div>
+<%- include('templates/footer') %>
