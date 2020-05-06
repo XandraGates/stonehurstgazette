@@ -5,7 +5,7 @@ mongoose = require('mongoose'),
 methodOverride = require('method-override'),
 expressSanitizer = require("express-sanitizer"),
 locus = require("locus"),
-port = 5000;
+PORT = process.env.PORT || 5000;
 
 
 // Connection
@@ -164,6 +164,6 @@ function escapeRegex(text) {
     return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 };
 
-app.listen(port, function(){
-    console.log(`Server is running on port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
 });
